@@ -20,10 +20,7 @@ document.querySelector("input[type=submit]").addEventListener("click",function(e
  
 });
  
-// Evento que se ejecuta cuando se pulsa sobre el botón enviar
-document.querySelector(".enviar").addEventListener("click", function(e) {
-    this.closest("form").submit();
-})
+
 function agregarFila(nombre, apellido,telefono,correo) {
     // añadimos el alumno a la tabla crando el tr, td's y el botón para eliminarlo
     const tr=document.createElement("tr");
@@ -54,6 +51,5 @@ function agregarFila(nombre, apellido,telefono,correo) {
     tr.appendChild(tdCorreo);
 
     const tbody=document.getElementById("listado").querySelector("tbody").appendChild(tr);
-
 
 }
