@@ -6,54 +6,56 @@
         <title>Formulario</title>
         <link rel="stylesheet" href="../css/diseño.css">
     </head>
-    <body>
-    <div>
-        <form class="formulario" method="POST">
 
-            <label>Ingresar Datos</label>
-            <br>
-            <br>
-            <div> 
-                <label>Ingresar nombre</label>
-                <br>
-                <input type="text" id="apellido" name="nombre" required>  
-            </div>
-            <br>
-            <div> 
-                <label>Ingresar Apellido</label>
-                <br>
-                <input type="text" id="apellido" name="apellido" required>  
-            </div>
+<body>
+    <div class="login-box">
+            
+            <img src="/imagenes/logo user.jpg" class="avatar" alt="avatar imagenes">
+            
+            <form class="formulario" method="POST">
+
+            <h1> Registro De Usuario</h1>
             <br>
             <div> 
-                <label>Ingresar Telefono</label>
-                <br>
-                <input type="number" id="telefono" name="telefono" required>  
+                
+                <input type="text" id="apellido" name="nombre" placeholder="Ingresar Nombre" required>  
             </div>
-            <br>
+            
             <div> 
-                <label>Ingresar Correo</label>
-                <br>
-                <input type="text" id="correo" name="correo" required>  
+                
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" required>  
             </div>
-            <br>
+            
+            <div> 
+                
+                <input type="number" id="telefono" name="telefono" placeholder="Ingresar Telefono" required>  
+            </div>
+            
+            <div> 
+                
+                <input type="text" id="correo" name="correo" placeholder="Ingresar Correo" required>  
+            </div>
+            
             <div> 
                 <input type="submit" name="submit" value="Agregar" class="boton-agregar">
             </div>
         </form>
     </div> 
-    <br>
-    <div>
+
+    <div class="main-container">
         <table id="listado" class="hiden">
+
             <thead class="thead-light">
+                <hr/>
+                <h1> Tabla de Usuarios</h1>
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">Telefono</th>
                     <th scope="col">Correo</th>
-                    <th></th>
                 </tr>
             </thead>
+
             <tbody>
                 <td>Arturo</td>
                 <td>Carlos</td>
@@ -63,7 +65,8 @@
 
         </table>
     </div>
-    </body>
+
+</body>
 </html>
 
 <script type="text/javascript" src="../js/scritp.js"></script>
