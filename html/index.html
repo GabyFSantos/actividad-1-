@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="../css/diseño.css">
+    </head>
+<body>
+    <div class="login-box">
+        
+            <img src="/imagenes/logo user.jpg" class="avatar" alt="avatar imagenes">
+            <form class="formulario" method="POST">
+
+            <h1> Registro De Usuario</h1>
+            <br>
+            <div> 
+                <input type="text" id="apellido" name="nombre" placeholder="Ingresar Nombre" required>  
+            </div>
+
+            <div> 
+                
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" required>  
+            </div>
+            
+            <div> 
+                
+                <input type="number" id="telefono" name="telefono" placeholder="Ingresar Telefono" required>  
+            </div>
+            
+            <div> 
+                
+                <input type="text" id="correo" name="correo" placeholder="Ingresar Correo" required>  
+            </div>
+            
+            <div> 
+                <input type="submit" name="submit" value="Agregar" class="boton-agregar">
+            </div>
+        </form>
+    </div> 
+
+    <div class="main-container">
+        <table id="listado" class="hiden">
+
+            <thead class="thead-light">
+                <hr/>
+                <h1> Tabla de Usuarios</h1>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Correo</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <td>Arturo</td>
+                <td>Carlos</td>
+                <td>300143578</td>
+                <td>arturocarlos03@gmail.com</td>
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="../js/scritp.js"></script>
