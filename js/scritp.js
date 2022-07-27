@@ -45,10 +45,17 @@ function agregarFila(nombre, apellido,telefono,correo) {
     tdCorreo.appendChild(txt);
     tdCorreo.className="correo";
 
+    const tdRemove=document.createElement("td");
+    const buttonRemove=document.createElement("img");
+    buttonRemove.src="../imagenes/eliminar.png";
+    buttonRemove.onclick=eliminarFila;
+    tdRemove.appendChild(buttonRemove);
+
     tr.appendChild(tdNombre);
     tr.appendChild(tdApellido);
     tr.appendChild(tdTelefono);
     tr.appendChild(tdCorreo);
+    tr.appendChild(tdRemove);
 
     const tbody=document.getElementById("listado").querySelector("tbody").appendChild(tr);
 
