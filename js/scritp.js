@@ -8,6 +8,29 @@ document.querySelector("input[type=submit]").addEventListener("click",function(e
     const telefono=document.querySelector("input[name=telefono]");
     const correo=document.querySelector("input[name=correo]");
 
+
+    if (!nombre.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el nombre")
+        return;
+    }
+    if (!apellido.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el apellido")
+        return;
+    }
+    if (!telefono.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el telefono")
+        return;
+    }
+    if (!correo.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el correo")
+        return;
+    }
+
+
     agregarFila(nombre.value, apellido.value,telefono.value,correo.value);
     agregarInput(nombre.value, apellido.value, telefono.value,correo.value);
  
@@ -59,4 +82,21 @@ function agregarFila(nombre, apellido,telefono,correo) {
 
     const tbody=document.getElementById("listado").querySelector("tbody").appendChild(tr);
 
+}
+
+
+function eliminarFila(e) {
+    const tr=this.closest("tr")
+    const nombre=tr.querySelector(".nombre").innerText;
+    const apellido=tr.querySelector(".apellido").innerText;
+    const telefono=tr.querySelector(".telefono").innerText;
+    const correo=tr.querySelector(".correo").innerText;
+
+    eliminarInput(nombre,apellido,telefono,correo);
+    tr.remove();
+
+    if (document.getElementById("listado").querySelector("tbody").querySelectorAll("tr").length==0) {
+        document.getElementById("listado").classList.add("hide");
+    }
+ 
 }
