@@ -32,7 +32,6 @@ document.querySelector("input[type=submit]").addEventListener("click",function(e
 
 
     agregarFila(nombre.value, apellido.value,telefono.value,correo.value);
-    agregarInput(nombre.value, apellido.value, telefono.value,correo.value);
  
     //limpiamos los valores del input
     correo.value = "";
@@ -86,14 +85,8 @@ function agregarFila(nombre, apellido,telefono,correo) {
 
 
 function eliminarFila(e) {
-    const tr=this.closest("tr")
-    const nombre=tr.querySelector(".nombre").innerText;
-    const apellido=tr.querySelector(".apellido").innerText;
-    const telefono=tr.querySelector(".telefono").innerText;
-    const correo=tr.querySelector(".correo").innerText;
 
-    eliminarInput(nombre,apellido,telefono,correo);
-    tr.remove();
+    this.closest("tr").remove();
 
     if (document.getElementById("listado").querySelector("tbody").querySelectorAll("tr").length==0) {
         document.getElementById("listado").classList.add("hide");
