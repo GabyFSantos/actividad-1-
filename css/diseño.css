@@ -67,7 +67,7 @@ body {
 
 .login-box input[type="submit"]:hover {
     cursor: pointer;
-    background: #039BE5;
+    background: #FF3300;
     color: black;
 }
 
@@ -85,13 +85,9 @@ h1 {
     text-align: center;
 }
 
-hr {
-    color: black;
-
-}
 
 table {
-    background-color: #17202A;
+    background-color: #EEEEEE;
     top: 90px;
     text-align: left;
     width: 100%;
@@ -100,21 +96,23 @@ table {
 
 
 th, td {
-    border:solid black;
     padding: 20px;
 }
 
-td {
-    color: white;
-}
 
 thead {
     background-color: #b80f22;
-    border-bottom: solid 5px;
+    border-bottom: solid 5px #000000;
+    color: white;
+    font-size: 18px;
 }
 
 tr:hover td {
     cursor: pointer;
-    background: #039BE5;
-    color: black;
+    background: #FF3300;
+    color: #FAFAFA;
+}
+
+tr:nth-child(even) {
+    background-color: #78909C;
 }
