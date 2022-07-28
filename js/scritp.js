@@ -8,8 +8,30 @@ document.querySelector("input[type=submit]").addEventListener("click",function(e
     const telefono=document.querySelector("input[name=telefono]");
     const correo=document.querySelector("input[name=correo]");
 
+
+    if (!nombre.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el nombre")
+        return;
+    }
+    if (!apellido.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el apellido")
+        return;
+    }
+    if (!telefono.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el telefono")
+        return;
+    }
+    if (!correo.value) {
+        nombre.classList.add("error");
+        alert("Ingrese el correo")
+        return;
+    }
+
+
     agregarFila(nombre.value, apellido.value,telefono.value,correo.value);
-    agregarInput(nombre.value, apellido.value, telefono.value,correo.value);
  
     //limpiamos los valores del input
     correo.value = "";
@@ -45,11 +67,29 @@ function agregarFila(nombre, apellido,telefono,correo) {
     tdCorreo.appendChild(txt);
     tdCorreo.className="correo";
 
+    const tdRemove=document.createElement("td");
+    const buttonRemove=document.createElement("img");
+    buttonRemove.src="../imagenes/eliminar.png";
+    buttonRemove.onclick=eliminarFila;
+    tdRemove.appendChild(buttonRemove);
+
     tr.appendChild(tdNombre);
     tr.appendChild(tdApellido);
     tr.appendChild(tdTelefono);
     tr.appendChild(tdCorreo);
+    tr.appendChild(tdRemove);
 
     const tbody=document.getElementById("listado").querySelector("tbody").appendChild(tr);
 
+}
+
+
+function eliminarFila(e) {
+
+    this.closest("tr").remove();
+
+    if (document.getElementById("listado").querySelector("tbody").querySelectorAll("tr").length==0) {
+        document.getElementById("listado").classList.add("hide");
+    }
+ 
 }
